@@ -1,9 +1,20 @@
 // Variables
 // ==================
-$font: "Open Sans Condensed", sans-serif;
-$font-alt: "Montserrat", sans-serif;
+$font: "Lato", sans-serif;
+$font-alt: "Amiri", serif;
 
 // Font face
 // ==================
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i|Open+Sans+Condensed:300,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amiri|Lato:400,900&display=swap");
+
+// Texts styles
+// ==================
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-big {
+    font-size: 2.25rem;
+    font-family: $font-alt;
+}

@@ -1,0 +1,12 @@
+.footer {
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .github {
+        display: none;
+    }
+}
