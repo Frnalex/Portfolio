@@ -1,0 +1,52 @@
+// Variables
+// ==================
+:root {
+    --black: #161616;
+    --white: #ffffff;
+}
+
+// Outils
+// ==================
+@import "tools/reset";
+@import "tools/mixins";
+@import "tools/typography";
+
+// Generic
+// ==================
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: $font;
+    font-size: 16px;
+    color: var(--white);
+    line-height: 1.3;
+    background-color: var(--black);
+    position: relative;
+    overflow-x: hidden;
+}
+
+@include up(900) {
+    body {
+        background-color: #fff;
+    }
+}
+@include up(900) {
+    body {
+        font-size: 16px;
+    }
+}
+
+::placeholder {
+    background-color: green($color: #000000);
+}
+
+// Modules
+// ==================
+
+// Pages
+// ==================
