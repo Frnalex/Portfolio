@@ -26,38 +26,70 @@
             mix-blend-mode: difference;
             transform: translateY(0);
         }
+
+        .project__img {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+
+            .project__OverlayTop,
+            .project__OverlayBottom {
+                height: 50%;
+                width: 100%;
+                background-color: var(--black);
+                position: absolute;
+                left: 0;
+            }
+
+            .project__OverlayTop {
+                top: 0%;
+            }
+            .project__OverlayBottom {
+                top: 50%;
+            }
+        }
     }
 }
 
-.project__img {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+@include up(992) {
+    .projects {
+        .projects__list {
+            height: 75%;
+            max-height: 500px;
+            width: 100%;
+        }
 
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
+        .projects__link {
+            line-height: calc(500px / 4);
+            overflow: hidden;
+            position: relative;
 
-    .project__OverlayTop,
-    .project__OverlayBottom {
-        height: 50%;
-        width: 100%;
-        background-color: var(--black);
-        position: absolute;
-        left: 0;
-    }
+            .project__img {
+                .project__OverlayTop,
+                .project__OverlayBottom {
+                    transition: all 0.3s ease-in-out;
+                }
+            }
 
-    .project__OverlayTop {
-        top: 0;
-    }
-    .project__OverlayBottom {
-        top: 50%;
+            .projects__item:hover .project__img {
+                .project__OverlayTop {
+                    top: -50%;
+                }
+                .project__OverlayBottom {
+                    top: 100%;
+                }
+            }
+        }
     }
 }

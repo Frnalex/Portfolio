@@ -45,6 +45,48 @@ body {
     right: 20px;
 }
 
+@include up(768) {
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .top__link {
+        top: 30px;
+        right: 30px;
+        position: fixed;
+        mix-blend-mode: difference;
+    }
+}
+
+@include up(992) {
+    .container {
+        padding-left: 162px;
+        padding-right: 162px;
+    }
+
+    .link {
+        position: relative;
+    }
+
+    .link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        display: block;
+        right: 0;
+        background: #fff;
+        transition: width 0.2s ease;
+    }
+
+    .link:hover::after {
+        width: 100%;
+        left: 0;
+        background: #fff;
+    }
+}
+
 // Modules
 // ==================
 @import "modules/footer";

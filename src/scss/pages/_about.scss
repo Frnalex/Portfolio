@@ -3,21 +3,24 @@
     z-index: 20;
     width: 100%;
     background-color: var(--black);
+
+    .top__link {
+        z-index: 40;
+    }
 }
 
 .about__infos {
     font-size: 1.125rem;
+    width: 100%;
 
     .about__photo {
         width: 100%;
         height: 60vh;
         height: calc(var(--vh, 1vh) * 60);
-        object-fit: cover;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
+        overflow: hidden;
+        background-image: linear-gradient(0deg, var(--black) 0%, transparent 25%), url("../img/profil.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
     }
 
     .about__perso {
@@ -42,8 +45,9 @@
             }
         }
 
-        a {
-            display: block;
+        .about__scroll {
+            margin-bottom: 0;
+            height: 0;
         }
     }
 }
@@ -55,9 +59,80 @@
     z-index: 30;
     margin-top: 70px;
     margin-bottom: 40px;
+    background-color: var(--black);
 
     p {
         margin-bottom: 20px;
         font-size: 1.5rem;
+    }
+}
+
+@include up(768) {
+    .about__infos {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        display: flex;
+        align-items: flex-end;
+        background-color: var(--black);
+
+        .about__photo {
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient(-90deg, var(--black) 0%, transparent 25%), url("../img/profil.jpg");
+        }
+
+        .about__perso {
+            top: initial;
+            margin-bottom: 0;
+
+            .about__scroll {
+                margin-bottom: 0;
+                margin-top: 100px;
+                height: 100px;
+                width: 1px;
+                background-color: var(--white);
+                position: relative;
+                animation: scroll 1s ease-out infinite;
+            }
+        }
+    }
+
+    .about__description {
+        min-height: 100vh;
+        margin-top: 100vh;
+        margin-top: calc(var(--vh, 1vh) * 100);
+        margin-bottom: 0;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include up(768) {
+    .about__description {
+        padding-right: 50px;
+
+        p {
+            margin-bottom: 50px;
+            font-size: 2.25rem;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(100%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
     }
 }
