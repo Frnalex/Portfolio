@@ -1,0 +1,63 @@
+.about {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.about__infos {
+    font-size: 1.125rem;
+
+    .about__photo {
+        width: 100%;
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 60);
+        object-fit: cover;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .about__perso {
+        position: relative;
+        top: -10vh;
+        top: calc(var(--vh, 1vh) * -10);
+        margin-bottom: -10vh;
+        margin-bottom: calc(var(--vh, 1vh) * -10);
+
+        > p {
+            margin-bottom: 40px;
+        }
+
+        > div {
+            margin-bottom: 20px;
+
+            span {
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                opacity: 0.75;
+            }
+        }
+
+        a {
+            display: block;
+        }
+    }
+}
+
+.about__description {
+    text-transform: uppercase;
+    background-color: var(--black);
+    position: relative;
+    z-index: 30;
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+    p {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+}

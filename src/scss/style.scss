@@ -18,6 +18,8 @@ html,
 body {
     width: 100%;
     height: auto;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 body {
@@ -35,13 +37,12 @@ body {
     padding-right: 40px;
 }
 
-.about__link {
+.top__link {
     position: absolute;
     z-index: 10;
     padding: 20px;
     top: 20px;
     right: 20px;
-    text-transform: capitalize;
 }
 
 // Modules
@@ -51,3 +52,5 @@ body {
 // Pages
 // ==================
 @import "pages/home";
+@import "pages/project";
+@import "pages/about";

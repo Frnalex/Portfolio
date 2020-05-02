@@ -18,6 +18,8 @@
         "sass": "^1.26.5"
     },
     "dependencies": {
-        "css-mqpacker": "^7.0.0"
+        "@barba/core": "^2.9.7",
+        "css-mqpacker": "^7.0.0",
+        "gsap": "^3.2.6"
     }
 }
