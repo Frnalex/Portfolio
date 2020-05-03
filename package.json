@@ -20,6 +20,7 @@
     "dependencies": {
         "@barba/core": "^2.9.7",
         "css-mqpacker": "^7.0.0",
-        "gsap": "^3.2.6"
+        "gsap": "^3.2.6",
+        "particles.js": "^2.0.0"
     }
 }

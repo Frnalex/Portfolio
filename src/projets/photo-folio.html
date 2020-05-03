@@ -10,12 +10,13 @@
 </head>
 
 <body data-barba="wrapper">
+    <div id="particles-js"></div>
 
     <div class="top__link text-sm">
         <a href="../about.html" class="link">À Propos</a>
     </div>
 
-    <main data-barba="container" data-barba-namespace="photo-folio">
+    <main data-barba="container" data-barba-namespace="project" class="changingContainer">
         <div class="project__text container">
             <div class="project__title text-big">
                 <h1>Photo folio</h1>
@@ -52,7 +53,7 @@
         </div>
 
         <footer class="project__footer container">
-            <a href="../index.html">
+            <a href="../index.html#">
                 <span>Liste des</span>
                 <p>Projets</p>
             </a>
@@ -77,6 +78,13 @@
             <a href="mailto:alexandre.fournou@gmail.com" target="_blank" class="link">Email</a>
         </div>
     </footer>
+
+    <div class="screen__transition">
+        <div class="screen__white"></div>
+        <div class="screen__black"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </body>
 
 </html>

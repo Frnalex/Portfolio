@@ -55,9 +55,6 @@
 }
 
 @include up(1200) {
-    .project__infos {
-    }
-
     .project__year {
         width: 12.5%;
     }
@@ -93,6 +90,8 @@
     .project__text {
         position: fixed;
         top: 0;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
     }
 
     .project__images {

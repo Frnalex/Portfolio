@@ -10,17 +10,19 @@
 </head>
 
 <body data-barba="wrapper">
+    <div id="particles-js"></div>
 
     <div class="top__link text-sm">
         <a href="./about.html">À Propos</a>
     </div>
 
-    <main class="container about" data-barba="container" data-barba-namespace="about">
+    <main class="container about" data-barba="container" data-barba-namespace="about" class="changingContainer">
         <div class="top__link text-sm">
             <a href="./index.html" class="link">Retour aux projets</a>
         </div>
 
         <div class="about__infos ">
+
             <div class="about__photo">
             </div>
             <div class="about__perso">
@@ -74,6 +76,13 @@
             <a href="mailto:alexandre.fournou@gmail.com" target="_blank">Email</a>
         </div>
     </footer>
+
+    <div class="screen__transition">
+        <div class="screen__white"></div>
+        <div class="screen__black"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </body>
 
 </html>
