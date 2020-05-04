@@ -116,7 +116,7 @@
 
 @include up(768) {
     .about__description {
-        padding-right: 50px;
+        padding-right: 200px !important;
 
         p {
             margin-bottom: 50px;

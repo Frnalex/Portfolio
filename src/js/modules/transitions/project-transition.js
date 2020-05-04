@@ -9,7 +9,10 @@ class Project extends Highway.Transition {
         const projectsLink = document.querySelectorAll(".projects__list li");
         const projectsItems = document.querySelectorAll(".projects__link a");
         const triggerBloc = trigger.parentNode.parentNode;
+        const triggerImg = triggerBloc.querySelector(".project__img");
         let lineHeight = projectsLink[0].clientHeight;
+
+        triggerImg.classList.add("clicked");
 
         const tl = gsap.timeline();
         tl.to(projectsItems, { duration: 0.2, transform: "translateY(100%)", ease: "power3.in" });
@@ -20,8 +23,8 @@ class Project extends Highway.Transition {
         tl.to(triggerBloc, { duration: 0.35, position: "relavive", lineHeight: window.innerHeight + "px", ease: "power4.Out", delay: "-0.35" });
         tl.to(".project__img", { ClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", delay: "-0.6" });
 
-        tl.to(".screen__white", { duration: 0.4, transform: "translateY(-100%)", delay: 1 });
-        tl.to(".screen__black", { duration: 0.4, transform: "translateY(-100%)", delay: "-0.25", onComplete: done });
+        tl.to(".screen__white", { duration: 0.4, transform: "translateY(-100%)", ease: "power1.inOut", delay: 0.7 });
+        tl.to(".screen__black", { duration: 0.4, transform: "translateY(-100%)", ease: "power1.inOut", delay: "-0.25", onComplete: done });
     }
 
     in({ from, done }) {
@@ -32,9 +35,12 @@ class Project extends Highway.Transition {
         from.remove();
 
         // Animation
+        const title = document.querySelector(".project__title h1 span");
+
         const tl = gsap.timeline();
-        tl.to(".screen__black", { duration: 0.4, transform: "translateY(-200%)", delay: 0 });
-        tl.to(".screen__white", { duration: 0.4, transform: "translateY(-200%)", delay: "-0.25", onComplete: done });
+        tl.to(".screen__black", { duration: 0.4, transform: "translateY(-200%)", ease: "power1.inOut" });
+        tl.to(".screen__white", { duration: 0.4, transform: "translateY(-200%)", ease: "power1.inOut", delay: "-0.25", onComplete: done });
+        tl.from(title, { duration: 0.4, transform: "translateY(100%)", ease: "power3.out", delay: "-.05" });
         tl.set(".screen__black", { transform: "translateY(0)" });
         tl.set(".screen__white", { transform: "translateY(0)" });
     }

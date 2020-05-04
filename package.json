@@ -25,6 +25,7 @@
         "css-mqpacker": "^7.0.0",
         "gsap": "^3.2.6",
         "particles.js": "^2.0.0",
+        "scrollmagic": "^2.0.7",
         "swup": "^2.0.9",
         "transitions": "^2.0.2"
     }

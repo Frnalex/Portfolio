@@ -45,6 +45,14 @@ body {
     right: 20px;
 }
 
+.top__link.link__home {
+    left: 30px;
+    bottom: 20px;
+    top: auto;
+    z-index: 3;
+    mix-blend-mode: normal;
+}
+
 @include up(768) {
     .container {
         padding-left: 50px;

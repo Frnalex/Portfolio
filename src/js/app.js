@@ -7,4 +7,4 @@ import "./tools/vh-fix";
 import "./modules/particles.min";
 import "./modules/particles";
 import "./modules/pages-transition";
-// import "./modules/home-image";
+import "./modules/project-page";

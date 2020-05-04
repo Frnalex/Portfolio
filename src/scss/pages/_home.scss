@@ -36,6 +36,7 @@
             height: 100%;
             clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
             transition: clip-path 0.5s ease-in-out;
+            opacity: 0;
 
             img {
                 display: block;
@@ -44,6 +45,10 @@
                 object-fit: cover;
                 object-position: 50% 50%;
             }
+        }
+
+        .project__img.clicked {
+            opacity: 1;
         }
     }
 }
@@ -63,9 +68,11 @@
 
             .project__img {
                 transition: all 0.3s ease-in-out;
+                opacity: 1;
             }
 
-            .projects__item:hover .project__img {
+            .projects__item:hover .project__img,
+            .projects__item .project__img.clicked {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
         }
