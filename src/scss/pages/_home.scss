@@ -24,7 +24,7 @@
             display: inline-block;
             color: #fff;
             mix-blend-mode: difference;
-            transform: translateY(0);
+            transition: all 0.2s ease-in;
         }
 
         .project__img {
@@ -35,6 +35,7 @@
             width: 100%;
             height: 100%;
             clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            transition: clip-path 0.5s ease-in-out;
 
             img {
                 display: block;

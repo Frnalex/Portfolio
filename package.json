@@ -19,11 +19,13 @@
     },
     "dependencies": {
         "@barba/core": "^2.9.7",
+        "@dogstudio/highway": "^2.2.1",
         "@swup/debug-plugin": "^1.0.3",
         "@swup/js-plugin": "^1.0.4",
         "css-mqpacker": "^7.0.0",
         "gsap": "^3.2.6",
         "particles.js": "^2.0.0",
-        "swup": "^2.0.9"
+        "swup": "^2.0.9",
+        "transitions": "^2.0.2"
     }
 }
