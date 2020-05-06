@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Développeur Front-End & Webdesigner - Alexandre Fournou</title>
-    <script src="../js/app.js" defer></script>
     <link rel="stylesheet" href="../scss/style.scss">
 </head>
 
@@ -27,9 +26,9 @@
                 <div class="project__title text-big">
                     <h1><span>Victoria Labalme.</span></h1>
                 </div>
-                <span class="project__link">
+                <!-- <span class="project__link">
                     <a href="http://alexandre-fournou-photographie.fr/" target="_blank" class="link">Voir le site</a>
-                </span>
+                </span> -->
                 <div class="project__infos">
                     <div class="project__year">
                         <span>Année</span>
@@ -56,13 +55,14 @@
                 ../img/victoria/victoria-portfolio-home_w_803.jpg 803w,
                 ../img/victoria/victoria-portfolio-home_w_1117.jpg 1117w,
                 ../img/victoria/victoria-portfolio-home_w_1600.jpg 1600w"
-                    src="../img/victoria/victoria-portfolio-home_w_1600.jpg" alt="Page d'accueil">
+                    src="../img/victoria/victoria-portfolio-home_w_1600.jpg" alt="Page d'accueil" loading="lazy">
                 <img sizes="(min-width: 992px) 75vw, (min-width: 768x) 90vw, 100vw" srcset="
                 ../img/victoria/victoria-portfolio-project_w_400.jpg 400w,
                 ../img/victoria/victoria-portfolio-project_w_878.jpg 878w,
                 ../img/victoria/victoria-portfolio-project_w_1174.jpg 1174w,
                 ../img/victoria/victoria-portfolio-project_w_1600.jpg 1600w"
-                    src="../img/victoria/victoria-portfolio-project_w_1600.jpg" class="image-big" alt="Page projet">
+                    src="../img/victoria/victoria-portfolio-project_w_1600.jpg" class="image-big" alt="Page projet"
+                    loading="lazy">
             </div>
 
 
@@ -102,6 +102,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
